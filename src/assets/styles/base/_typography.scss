@@ -1,0 +1,42 @@
+:root{
+  --default-font-family: var(--IRAN-Yekan);
+}
+%text{
+  font-family: var(--default-font-family);
+  direction: rtl;
+  transition: 0.214s ease-in-out all;
+}
+.text--hover-able,a{
+  &:hover{
+    color: var(--pars-blue---1);
+  }
+}
+.title-bar__title{
+  @extend %text;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.primary__text{
+  @extend %text;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--pars-blue---3);
+}
+.primary__text--short{
+  @extend %text;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--pars-blue---3);
+}
+.secondary__text{
+  @extend %text;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: var(--pars-blue---3);
+}
+.bold{
+  font-weight: bold !important;
+}
+.digit{
+  font-family: IRANSans;
+}

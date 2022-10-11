@@ -1,0 +1,66 @@
+.flex{
+  display: flex;
+}
+.flex-reverse{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.space-btw{
+  justify-content: space-between;
+}
+
+@mixin p-y($size) {
+  padding-top: $size;
+  padding-bottom: $size;
+}
+@mixin p-x($size) {
+  padding-right: $size;
+  padding-right: $size;
+}
+.m-center{
+margin: 0 auto;
+}
+.p-10{
+  padding: 10px;
+}
+.p-y-10{
+  @include p-y(10px);
+}
+.p-x-10{
+  @include p-x(10px);
+}
+.p-8{
+  padding: 8px;
+}
+.p-t-8{
+  padding-top: 8px;
+}
+.p-t-4{
+  padding-top: 4px;
+}
+.p-b-8{
+  padding-top: 8px;
+}
+.p-y-8{
+  @include p-y(8px);
+}
+.p-x-8{
+  @include p-x(8px)
+}
+
+
+.w-fit{
+  display: table;
+}
+
+%abs-center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.normal-radius{
+  border-radius: 5px;
+}

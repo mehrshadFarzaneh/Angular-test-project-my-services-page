@@ -1,0 +1,52 @@
+table{
+direction: rtl;
+text-align: center;
+}
+tbody{
+  overflow: auto;
+  tr{
+    &:hover{
+      background-color: var(--pars-blue---1-low-ops);
+      cursor: pointer;
+      .td__menu{
+        display: initial !important;
+
+      }
+    }
+    .td__name{
+      svg-icon{
+        margin-right: 5px;
+      }
+      span{
+        margin-right: 25px;
+      }
+    }
+  }
+  .td__menu{
+    display: none;
+    svg{
+      transform: rotate(90deg);
+    }
+  }
+
+
+}
+
+
+// todo: clean
+.service-item__status{
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  display: table;
+  margin-left: 8px;
+  &.green{
+    background-color: var(--pars-green---1);
+  }
+  &.red{
+    background-color: var(--pars-pink---1);
+  }
+  &.orange{
+    background-color: var(--pars-yellow---1);
+  }
+}

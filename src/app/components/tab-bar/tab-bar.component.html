@@ -1,0 +1,12 @@
+<div class="pars-container flex-reverse m-center">
+  <ng-container *ngIf="$serviceList | async as Services">
+    <pars-tab
+    iconName="all-services" tabName="همه سرویس ها"
+    [tabCount]="Services.services.length">
+  </pars-tab>
+    <pars-tab *ngFor="let tabType of Services.types"
+    [iconName]="tabType" [tabName]="tabType"
+    [tabCount]="tabType | serviceCounter: Services.services">
+    </pars-tab>
+  </ng-container>
+</div>

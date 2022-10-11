@@ -1,0 +1,11 @@
+main{
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+pars-table{
+  flex: 1 1 auto;
+}
+.sub-header{
+  flex: 0 1 auto;
+}

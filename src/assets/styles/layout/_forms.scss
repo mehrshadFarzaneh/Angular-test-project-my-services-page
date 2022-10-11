@@ -1,0 +1,16 @@
+.form-group{
+  input{
+    direction: rtl;
+    text-align: center;
+    min-width: 30rem;
+    max-width: 30rem;
+    min-height: 4rem;
+    max-height: 4rem;
+    border-radius: 1rem;
+    @extend .secondary__text;
+    background-color: var(--pars-white---2);
+    &::placeholder{
+      color: var(--pars-blue---2);
+    }
+  }
+}

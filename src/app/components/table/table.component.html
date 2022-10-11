@@ -1,0 +1,37 @@
+<table class="pars-container m-center">
+  <thead>
+      <ng-content select="[t-heads]"></ng-content>
+  </thead>
+  <tbody>
+      <tr *ngFor="let serviceItem of tblArry">
+        <!-- Circle Status -->
+        <div class="service-item__status" [ngClass]="{
+          'green': serviceItem.status === 'Active',
+          'orange': serviceItem.status === 'Pending',
+          'red': serviceItem.status === 'Cancelled'}">
+        </div>
+        <!-- Name -->
+        <td class="td__name primary__text digit bold">
+          <svg-icon [name]="serviceItem.type" class="svg-container">
+          </svg-icon>
+          <span> {{serviceItem.name}} </span>
+        </td>
+        <!-- Price -->
+        <td class="digit primary__text">
+          {{serviceItem.amount | priceTable}}
+        </td>
+        <!-- Sarresid -->
+        <td class="digit primary__text">
+          {{serviceItem.nextduedate}}
+        </td>
+        <!-- button -->
+        <td class="td__action">
+          <button [ngClass]="{'disable': serviceItem.status === 'Cancelled'}">{{serviceItem.status | status}}</button>
+        </td>
+        <td class="td__menu">
+          <svg-icon name="mdi_more_horiz"  class="svg-container">
+          </svg-icon>
+        </td>
+      </tr>
+  </tbody>
+</table>

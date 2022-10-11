@@ -1,0 +1,49 @@
+pars-table{
+  overflow: auto;
+  max-height: calc(100vh - 270px);
+  thead{
+    @extend .secondary__text;
+    tr th{
+      @include p-y(20px);
+      top: 0;
+      position: sticky;
+      background: var(--pars-white---1);
+      z-index: 10;
+    }
+    font-weight: bold;
+  }
+  .th__name,.td__name{
+    text-align: right;
+  }
+  .th__action{
+    text-align: center;
+    width: 175px;
+  }
+  .th__menu,.td__menu{
+    width: 20px;
+  }
+
+
+  tbody{
+    tr > *{
+      @include p-y(10px);
+    }
+  }
+}
+
+
+@media only screen and (max-width: 1420px){
+  pars-table {
+    width: fit-content !important;
+    margin: 0 auto;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+  }
+  @media only screen and (max-height: 700px) {
+    pars-table{
+      max-height: calc(100vh - 160px) !important;
+    }
+  }
+
+

@@ -1,0 +1,15 @@
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  max-width: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  width: 100vw;
+}
+html,body{
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}

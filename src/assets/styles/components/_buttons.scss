@@ -1,0 +1,20 @@
+button{
+  @extend .secondary__text;
+  color: var(--pars-blue---1);
+  // padding: 5px 10px;
+  text-align: center;
+  border: 1px solid var(--pars-blue---1);
+  background-color: white;
+  border-radius: 5px;
+  width: 106px;
+  height: 30px;
+  &:hover{
+    cursor: pointer;
+  }
+  &.disable{
+    opacity: 0.4;
+    &:hover{
+      cursor: not-allowed;
+    }
+  }
+}

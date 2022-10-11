@@ -1,0 +1,33 @@
+.pars-container{
+  width: 142.0rem;
+  max-width: 142.0rem;
+}
+.svg-container{
+  width: 2.4rem;
+  height: 2.4rem;
+  position: relative;
+  svg{
+    @extend %abs-center;
+  }
+}
+.svg-container--big{
+  width: 4rem;
+  height: 4rem;
+  position: relative;
+  svg{
+    @extend %abs-center;
+  }
+}
+
+@media only screen and (max-width: 1420px){
+  .pars-container{
+    width: 91.6rem;
+    max-width: 91.6rem;
+  }
+  }
+
+  @media only screen and (max-height: 700px) {
+    .svg-container--big,.tab__mark{
+      display:none !important;
+    }
+  }
