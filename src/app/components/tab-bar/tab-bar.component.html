@@ -2,11 +2,14 @@
   <ng-container *ngIf="$serviceList | async as Services">
     <pars-tab
     iconName="all-services" tabName="همه سرویس ها"
-    [tabCount]="Services.services.length">
+    [tabCount]="Services.services.length"
+    (click)="tabClicked('')"
+    class="active-tab">
   </pars-tab>
     <pars-tab *ngFor="let tabType of Services.types"
     [iconName]="tabType" [tabName]="tabType"
-    [tabCount]="tabType | serviceCounter: Services.services">
+    [tabCount]="tabType | serviceCounter: Services.services"
+    (click)="tabClicked(tabType)">
     </pars-tab>
   </ng-container>
 </div>

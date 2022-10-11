@@ -12,6 +12,7 @@
       fill: var(--pars-blue---1);
     }
   }
+
   svg path{
     transition: 0.214s ease-in-out all;
   }
@@ -37,7 +38,7 @@
     &::after{
       content: "";
     }
-    &:hover{
+    &:hover,.active-tab .tab{
       &::after{
         display: block;
         content: "";

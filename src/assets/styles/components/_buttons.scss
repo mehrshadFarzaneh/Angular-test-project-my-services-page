@@ -18,3 +18,13 @@ button{
     }
   }
 }
+
+
+.active-tab .tab{
+  *{
+    color: var(--pars-blue---1) !important;
+  }
+  svg path{
+    fill: var(--pars-blue---1) !important;
+  }
+}

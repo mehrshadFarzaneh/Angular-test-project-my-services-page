@@ -16,6 +16,7 @@ import { SortTablePipe } from './pipes/sort-table.pipe';
 import { FilterDataPipe } from './pipes/filter-data.pipe';
 import { StatusPipe } from './pipes/status.pipe';
 import { PriceTablePipe } from './pipes/price-table.pipe';
+import { ActiveTabDirective } from './directives/active-tab.directive';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { PriceTablePipe } from './pipes/price-table.pipe';
     SortTablePipe,
     FilterDataPipe,
     StatusPipe,
-    PriceTablePipe
+    PriceTablePipe,
+    ActiveTabDirective
   ],
   imports: [
     BrowserModule,

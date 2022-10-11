@@ -2,9 +2,9 @@
 <main>
   <div class="sub-header">
     <pars-search-bar (onSearching)="setSearchQuery($event)"></pars-search-bar>
-    <pars-tab-bar></pars-tab-bar>
+    <pars-tab-bar (onTabClicked)="filterDataByType($event)"></pars-tab-bar>
   </div>
-  <pars-table *ngIf="$serviceList | async as Services" [tblArry]="Services.services | filterData:filterDataQuery ">
+  <pars-table *ngIf="$serviceList | async as Services" [tblArry]="Services.services | filterData:filterDataQuery:filterDataQueryByType ">
     <tr t-heads>
       <th>
         <!-- status -->

@@ -11,11 +11,15 @@ import { Observable } from 'rxjs/internal/Observable';
 export class AppComponent implements OnInit {
   $serviceList!: Observable<TabBarModel>;
   filterDataQuery: string = "";
+  filterDataQueryByType: string = "";
   constructor(private dataServices: ServicesService) { }
   ngOnInit(): void {
     this.$serviceList = this.dataServices.getData();
   }
   setSearchQuery(value: string) {
     this.filterDataQuery = value;
+  }
+  filterDataByType(value:string) {
+    this.filterDataQueryByType = value;
   }
 }
