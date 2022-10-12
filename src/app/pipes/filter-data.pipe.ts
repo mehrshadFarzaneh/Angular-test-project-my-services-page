@@ -8,9 +8,8 @@ export class FilterDataPipe implements PipeTransform {
 
   transform(value: ServiceModel[], filterQuery:string,filterByType:string): ServiceModel[]
   {
-    debugger;
-    let result = value.filter(a => (a.name as string).toLowerCase().includes(filterQuery));
-     result = value.filter(a => (a.type as string).toLowerCase().includes(filterByType.toLocaleLowerCase()));
+    let result = value.filter(a => (a.name as string).toLowerCase().includes(filterQuery.toLocaleLowerCase()));
+     result = result.filter(a => (a.type as string).toLowerCase().includes(filterByType.toLocaleLowerCase()));
     if(result){
       return result;
     } else {
