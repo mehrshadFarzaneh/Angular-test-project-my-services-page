@@ -17,6 +17,7 @@ import { FilterDataPipe } from './pipes/filter-data.pipe';
 import { StatusPipe } from './pipes/status.pipe';
 import { PriceTablePipe } from './pipes/price-table.pipe';
 import { ActiveTabDirective } from './directives/active-tab.directive';
+import { DateJalaliPipe } from './pipes/date-jalali.pipe';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ActiveTabDirective } from './directives/active-tab.directive';
     FilterDataPipe,
     StatusPipe,
     PriceTablePipe,
-    ActiveTabDirective
+    ActiveTabDirective,
+    DateJalaliPipe
   ],
   imports: [
     BrowserModule,

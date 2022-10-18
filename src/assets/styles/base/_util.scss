@@ -64,3 +64,13 @@ margin: 0 auto;
 .normal-radius{
   border-radius: 5px;
 }
+
+
+%noselect {
+    -webkit-user-select: none; /* Safari */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+.noselect{
+  @extend %noselect;
+}

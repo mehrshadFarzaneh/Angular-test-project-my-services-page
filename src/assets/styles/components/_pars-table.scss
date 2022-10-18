@@ -1,49 +1,87 @@
-pars-table{
-  overflow: auto;
+pars-table {
+  overflow: overlay;
   max-height: calc(100vh - 270px);
-  thead{
+  width: fit-content;
+  margin: 0 auto;
+  // padding-left: 10px;
+  // padding-right: 10px;
+
+  &::-webkit-scrollbar-track{
+    margin-top: 57px;
+  }
+
+  thead {
     @extend .secondary__text;
-    tr th{
+    @extend %noselect;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.03);
+    tr th {
       @include p-y(20px);
       top: 0;
       position: sticky;
       background: var(--pars-white---1);
       z-index: 10;
     }
+
     font-weight: bold;
   }
-  .th__name,.td__name{
+
+  .th__name,
+  .td__name {
     text-align: right;
   }
-  .th__action{
+  .td__name{
+    svg-icon{
+      margin-right: 12px !important;
+        svg{
+        width: 22px;
+                height: 24px;
+        }
+      }
+  }
+  .th__name{
+    display: flex;
+    div{
+      display: none;
+      width: 10px;
+      height: 10px;
+      margin-right: 12px;
+    }
+    .sorted{
+      display: inline-block !important;
+    }
+  }
+
+  .th__action {
     text-align: center;
     width: 175px;
   }
-  .th__menu,.td__menu{
+
+  .th__menu,
+  .td__menu {
     width: 20px;
   }
 
 
-  tbody{
-    tr > *{
+  tbody {
+    tr>* {
       @include p-y(10px);
     }
   }
 }
 
 
-@media only screen and (max-width: 1420px){
+
+@media only screen and (max-width: 1420px) {
   pars-table {
     width: fit-content !important;
     margin: 0 auto;
-    padding-left: 4px;
-    padding-right: 4px;
+    // padding-left: 4px;
+    // padding-right: 4px;
+  }
 }
-  }
-  @media only screen and (max-height: 700px) {
-    pars-table{
-      max-height: calc(100vh - 160px) !important;
-    }
-  }
 
-
+@media only screen and (max-height: 700px) {
+  pars-table {
+    max-height: calc(100vh - 160px) !important;
+  }
+}

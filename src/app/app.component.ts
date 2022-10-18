@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
   $serviceList!: Observable<TabBarModel>;
   filterDataQuery: string = "";
   filterDataQueryByType: string = "";
+  sortByName:boolean = false;
   constructor(private dataServices: ServicesService) { }
   ngOnInit(): void {
     this.$serviceList = this.dataServices.getData();
@@ -21,5 +22,8 @@ export class AppComponent implements OnInit {
   }
   filterDataByType(value:string) {
     this.filterDataQueryByType = value;
+  }
+  sortingByName() {
+    this.sortByName = !this.sortByName;
   }
 }

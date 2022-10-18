@@ -4,13 +4,16 @@
     <pars-search-bar (onSearching)="setSearchQuery($event)"></pars-search-bar>
     <pars-tab-bar (onTabClicked)="filterDataByType($event)"></pars-tab-bar>
   </div>
-  <pars-table *ngIf="$serviceList | async as Services" [tblArry]="Services.services | filterData:filterDataQuery:filterDataQueryByType ">
+  <pars-table *ngIf="$serviceList | async as Services" [tblArry]="Services.services | filterData:filterDataQuery:filterDataQueryByType | sortTable:sortByName ">
     <tr t-heads>
       <th>
         <!-- status -->
       </th>
-      <th class="th__name">
+      <th class="th__name" (click)="sortingByName()">
         نام / مشخصه
+      <div [ngClass]="{'sorted': sortByName}">
+        <svg-icon name="arrow-down"></svg-icon>
+      </div>
       </th>
       <th>
        هزینه

@@ -5,11 +5,12 @@
   padding-bottom: 42px;
   padding-left: 32px;
   padding-right: 32px;
+  width: auto !important;
 }
 @media only screen and (max-height: 700px) {
   .pars-container{
     padding-top: 18px;
-  padding-bottom: 18px;
+    padding-bottom: 18px;
   }
   
 }

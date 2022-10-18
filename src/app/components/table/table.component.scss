@@ -37,9 +37,11 @@ tbody{
 .service-item__status{
   width: 4px;
   height: 4px;
-  border-radius: 50%;
-  display: table;
-  margin-left: 8px;
+    border-radius: 50%;
+    display: table;
+    margin-left: -13px;
+    margin-right: 16px;
+    margin-bottom: 2px;
   &.green{
     background-color: var(--pars-green---1);
   }

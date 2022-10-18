@@ -31,6 +31,10 @@
     {
       "iconName": "Other",
       "iconPath": "/assets/svgs/tabar/Other.svg"
+    },
+    {
+      "iconName": "arrow-down",
+      "iconPath": "/assets/svgs/sort-arrow.svg"
     }
   ],
   "customIcons": [

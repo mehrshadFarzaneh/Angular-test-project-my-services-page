@@ -1,7 +1,25 @@
 .pars-container{
   width: 142.0rem;
   max-width: 142.0rem;
+
+  
 }
+
+// ****************** 
+  // #region BLEED MODE
+
+  // .pars-container{
+  //   width: 98vw !important;
+  //   max-width: 98vw !important;
+  // }
+  // pars-table{
+  //   width: 100vw !important;
+  //   max-width: 100vw !important;
+  // }
+  
+// #endregion BLEED MODE
+// ****************** 
+
 .svg-container{
   width: 2.4rem;
   height: 2.4rem;
@@ -18,6 +36,7 @@
     @extend %abs-center;
   }
 }
+
 
 @media only screen and (max-width: 1420px){
   .pars-container{
